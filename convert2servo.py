@@ -45,6 +45,8 @@ def convert_text_for_servo(command_action,num):
 		#print(text)
 	elif command_action == 'pakupaku':
 		text = 'ser.move_'+ command_action + "(" + str(num) + ')'
+	elif command_action == 'wink':
+		text = 'ser.move_'+ command_action + "(" + str(num) + ')'
 	#######################################################################
 	# num = degree
 	# 変数を変更するコマンド,角度

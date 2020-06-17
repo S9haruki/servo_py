@@ -231,6 +231,23 @@ class servo_control:
 	        self.pwms[1].ChangeDutyCycle(m_angle)
 	        time.sleep(0.25)
 
+	#目winkコマンド
+	def move_wink(self,times):
+	    times = int(times/0.75)
+	    for t in range(times):
+	
+	        m_angle = servo_angle(self.eye2)
+	        self.pwms[0].ChangeDutyCycle(m_angle)
+	        time.sleep(0.25)
+	
+	        m_angle = servo_angle(self.eye1)
+	        self.pwms[0].ChangeDutyCycle(m_angle)
+	        time.sleep(0.25)
+
+	        m_angle = servo_angle(self.eye2)
+	        self.pwms[0].ChangeDutyCycle(m_angle)
+	        time.sleep(0.25)
+
 
 if __name__ == "__main__":
     servo_m = servo_control()
